@@ -2,8 +2,24 @@
 using namespace std;
 
 int main(){
-    cout << "Enter an integer: ";
-    cout << "#Even numbers = ";
-    cout << "#Odd numbers = ";
+    int number;
+    int even_count = 0;
+    int odd_count = 0;
+    while(true){
+        cout << "Enter an integer: ";
+        cin >> number;
+        if(number == 0){
+            break;
+        } else {
+            if(number % 2 == 0){
+                even_count++;
+            } else {
+                odd_count++;
+            }
+        }
+    }
+
+    cout << "#Even numbers = " << even_count << endl;
+    cout << "#Odd numbers = " << odd_count << endl;
     return 0;
 }
